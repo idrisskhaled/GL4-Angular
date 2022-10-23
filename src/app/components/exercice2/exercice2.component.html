@@ -1,0 +1,58 @@
+<div class="d-flex flex-fill h-100">
+  <div class="p-2 d-flex flex-column flex-fill">
+    <div class="header"></div>
+    <div class="img-container">
+      <img *ngIf="imgSrc" [src]="imgSrc" alt="" />
+      <div *ngIf="!imgSrc" id="img"></div>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="p-2 text-center">
+        {{ firstname }}
+      </div>
+      <div class="p-2 text-center">
+        {{ lastname }}
+      </div>
+      <div class="p-2 text-center">
+        {{ job }}
+      </div>
+    </div>
+  </div>
+  <div class="p-2 d-flex flex-column flex-fill">
+    <div class="p-2">
+      <label for="firstname" class="form-label">firstname</label>
+      <input
+        type="text"
+        placeholder="firstname"
+        class="form-control"
+        (keyup)="changeFirstname($event)"
+      />
+    </div>
+    <div class="p-2">
+      <label for="lastname" class="form-label">lastname</label>
+      <input
+        type="text"
+        placeholder="lastname"
+        class="form-control"
+        (keyup)="changeLastname($event)"
+      />
+    </div>
+    <div class="p-2">
+      <label for="job" class="form-label">job</label>
+      <input
+        type="text"
+        placeholder="job"
+        class="form-control"
+        (keyup)="changeJob($event)"
+      />
+    </div>
+    <div class="p-2">
+      <label for="path" class="form-label">path</label>
+      <input
+        type="text"
+        placeholder="path"
+        class="form-control"
+        (keyup)="changeImg($event)"
+      />
+    </div>
+  </div>
+</div>

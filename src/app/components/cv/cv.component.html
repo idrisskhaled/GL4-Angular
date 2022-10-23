@@ -1,0 +1,7 @@
+<div class="container">
+    Cv component
+  <div class="po-3 d-flex gap-2">
+    <div class="p-2"><app-liste (event)="displayDetails($event)"></app-liste></div>
+    <div class="p-2 flex-fill"><app-detail [details]="details"></app-detail></div>
+  </div>
+</div>

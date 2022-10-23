@@ -1,0 +1,17 @@
+<div class="d-flex flex-fill">
+<div class="d-flex flex-column gap-3 flex-fill">
+    <div class="p-3 justify-content-center d-flex">
+        <span>
+            <input type="text" placeholder="tapez votre couleur" class="form-control" (change)="changeColor($event)">
+        </span>
+    </div>
+    <div class="p-3 justify-content-center d-flex">
+        <div id="color" [ngStyle]="{'background-color' : divColor }">
+
+        </div>
+    </div>   
+    <div class="p-3 justify-content-center d-flex">
+        <button class="btn btn-primary" (click)="divColor = 'grey'">Restaurer</button>
+    </div>
+</div>
+</div>
