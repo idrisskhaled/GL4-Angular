@@ -1,0 +1,26 @@
+<div class="p-2 container">
+    <div class="p-3 d-flex gap-3">
+        <div>
+            <label for="color" class="form-label">Color : </label>
+            <input type="color" class="form-control" id="color" (change)="changeColor($event)">
+        </div>
+        <div>
+            <label for="size" class="form-label">Size : </label>
+            <input type="text" id="size" class="form-control" (keyup)="changeSize($event)">
+        </div>      
+        <div>
+            <label for="font" class="form-label">Font Family : </label>
+            <select name="" id="font" class="form-select" (change)="changeFont($event)">
+                <option [value]="font" *ngFor="let font of fonts">
+                    {{font}}
+                </option>
+            </select>
+        </div>
+        
+    </div>
+    <div class="p-3">
+        <textarea name=""  cols="30" rows="10" class="form-control" [ngStyle]="{'font-family': font, 'color' : color, 'font-size' : size + 'px'}" >
+
+        </textarea>
+    </div>
+</div>

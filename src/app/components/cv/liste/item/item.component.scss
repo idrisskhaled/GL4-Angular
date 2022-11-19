@@ -1,7 +1,18 @@
 .container{
     background-color: white;
+    border: solid 1px lightgray;
+    border-radius: 6px;
 }
 .container:hover{
-    background-color: orange;
+    background-color: rebeccapurple;
     cursor: pointer;
+}
+.image > img{
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+}
+.embauched{
+    color: green;
+    font-weight: 700;
 }

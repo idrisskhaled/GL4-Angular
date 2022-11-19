@@ -4,6 +4,7 @@ import { CvComponent } from './components/cv/cv.component';
 import { Exercice1Component } from './components/exercice1/exercice1.component';
 import { Exercice2Component } from './components/exercice2/exercice2.component';
 import { Exercice3Component } from './components/exercice3/exercice3.component';
+import { Tp2Component } from './components/tp2/tp2.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,12 @@ const routes: Routes = [
     component : Exercice3Component
   },
   {
-    path : "exercice4",
+    path : "cv",
     component : CvComponent
+  },
+  {
+    path : "tp2",
+    component : Tp2Component
   }
 ];
 

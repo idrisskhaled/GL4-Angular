@@ -1,4 +1,25 @@
-<div class="container h-100">
-    Details component<br>
-    {{details}}
+<div class="container h-100 d-flex flex-column gap-3" >
+    <div class="name d-flex justify-content-center">
+        {{details.lastName}} {{details.firstName}}
+    </div>
+    <div class="title d-flex justify-content-center">
+        {{details.title}}
+    </div>
+    <div class=" d-flex justify-content-around">
+        <div class="p-2 d-flex flex-column border" *ngIf="details">
+            <span class="item">Followers</span>
+            <span class="d-flex justify-content-center">{{details.followers}}</span>
+        </div>
+        <div class="p-2 d-flex flex-column border" *ngIf="details">
+            <span class="item">Following</span>
+            <span class="d-flex justify-content-center">{{details.following}}</span>
+        </div>
+        <div class="p-2 d-flex flex-column border" *ngIf="details">
+            <span class="item">Projects</span>
+            <span class="d-flex justify-content-center">{{details.projects}}</span>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center" *ngIf="details">
+        <button class="btn " (click)="embauch()">Embauch</button>
+    </div>
 </div>

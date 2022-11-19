@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { EmbaucheServiceService } from 'src/app/services/embauche-service.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
-  @Input('details') details : string = ""
+  constructor(private embauchService : EmbaucheServiceService) { }
+  @Input('details') details : any 
   ngOnInit(): void {
+  }
+  embauch(){
+    this.embauchService.Embaush(this.details);
   }
 
 }

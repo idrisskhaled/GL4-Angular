@@ -1,4 +1,11 @@
-<div class="p-2 d-flex container" (click)="fireEvent()">
-    Item component<br>
-    Nous sommes Idriss et Fares.
+<div class="p-2 d-flex container" (click)="fireEvent()" >
+    <span class="p-2 image">
+        <img [src]="'../../../../../assets/' + imgSrc">
+    </span>
+    <span class="p-2 d-flex flex-column justify-content-center">
+        {{cv.lastName}}  {{cv.firstName}}
+    </span>
+    <span *ngIf="embauched" class="p-2 embauched d-flex flex-column justify-content-center">
+        Embauched
+    </span>
 </div>
